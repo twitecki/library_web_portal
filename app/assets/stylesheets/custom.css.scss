@@ -9,14 +9,21 @@ $colHighlight	 : #3399FF;
 /* universal */
 
 .jumbotron {
-	 height: 550px;
-    margin-bottom: 0px;
-    background-image: url(kidReading.jpg);
+	 height: 600px;
+    margin-bottom: -25px;
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
     text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+.jumbotron-bookstack {
+	  background-image: url(bookstack.jpg);
+}
+
+.jumbotron-kidsreading {
+    background-image: url(kidsreading.jpg); 
 }
 
 @mixin box_sizing {
@@ -101,10 +108,12 @@ footer a:hover {
 }
 
 footer small {
+	margin-left: 20px;
    float: left;
 }
 
 footer ul {
+	margin-right: 20px;
    float: right;
    list-style: none;
 }
@@ -154,15 +163,17 @@ aside {
   margin-right: 10px;
 }
 
-/* Form 
+/* Form */
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 100%;
+/*
+  width: 25%;
   margin-bottom: 15px;
-  @include box_sizing;
-}
 */
+  @include box_sizing;
+color: black;
+}
 
 input {
   height: auto !important;
