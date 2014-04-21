@@ -1,11 +1,19 @@
 class UsersController < ApplicationController
 
+	#before_action :set_user, only: [:show, :index]
+	before_action :index
+
   def show
     @user = User.find(params[:id])
+  	@medias = Media.all
   end
 
   def new
-    @user = User.new
+	@user = User.new
+  end
+
+  def index 
+    @users = User.all
   end
 
   def create
@@ -26,4 +34,9 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:first, :last, :email, :number)
   end
+
+  #def set_user
+  #  @user = User.find(params[:id])
+  #end
+
 end

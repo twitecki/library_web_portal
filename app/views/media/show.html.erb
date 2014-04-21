@@ -1,0 +1,14 @@
+
+<div class="jumbotron-media">
+<center>
+<section>
+<h1> <%= @media.title %> </h1>
+
+	<%= form_for(:media, url: media_path) do |f| %>
+		<%= render 'shared/sign_in_first_message' %>
+		<%= f.submit "Reserve This Book", class: "btn btn-large btn-primary" %>
+	<% end %>
+
+</section>
+</center>
+</div>

@@ -1,10 +1,20 @@
-<div class="row">
-   <aside class="span4">
+<div class="jumbotron-media">		
+
+	<center>
       <section>
          <h1>
             <%= @user.first %>, <%= @user.last %>
-            <%= @user.card_number%>
          </h1>
+            <%= @user.card_number%>
+			<h2> Reserved Books </h2>
+				<ol>
+				<%= @medias.each do |m| %>
+					<li>
+						<%= link_to(m.title, m) if @user.id == m.user_id %>
+					</li>
+				<% end %>	
+				</ol>
       </section>
-   </aside>
+			</center>
+
 </div>

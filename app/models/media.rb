@@ -1,6 +1,7 @@
 class Media < ActiveRecord::Base
 
 	belongs_to :user
-	validates :user_id, presence: true
+	belongs_to :media_type
+#	validates :user_id, presence: true
 
 end

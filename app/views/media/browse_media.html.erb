@@ -1,16 +1,15 @@
-
-<center>
+<div class="jumbotron-media">
+<section>
 <h1> Media </h1>
 
-<% @User.each do |mediaItem| %>
-	<ul>
-		<li><%= mediaItem.title %></li>
-	</ul>
-<% end %>
-
-
-
-</center>
-
+		<ol>
+	<% @medias.each do |mediaItem| %>
+					<li>
+						<%= link_to(mediaItem) do %> <strong><%= mediaItem.title %></strong> <% end %>
+					</li>
+	<% end %>
+		</ol>
+</section>
+</div>
 
 
