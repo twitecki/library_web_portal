@@ -7,13 +7,26 @@
          </h1>
             <%= @user.card_number%>
 			<h2> Reserved Books </h2>
-				<ol>
-				<%= @medias.each do |m| %>
-					<li>
-						<%= link_to(m.title, m) if @user.id == m.user_id %>
-					</li>
-				<% end %>	
-				</ol>
+
+
+				<table class="table table-striped media-table">
+				
+					<%
+      				@medias.each do |m|
+         				if @user.id == m.user_id %>
+								<tr>
+								<td>
+									<%= link_to(m) do %><strong> <%= m.title %><%end%>
+								</td>
+								</tr>
+            				<%
+         				end
+      				end	
+					%>
+
+								
+   			</table>
+
       </section>
 			</center>
 

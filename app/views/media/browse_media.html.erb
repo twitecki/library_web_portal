@@ -2,13 +2,14 @@
 <section>
 <h1> Media </h1>
 
-		<ol>
+	<table class="table table-striped media-table">
 	<% @medias.each do |mediaItem| %>
-					<li>
-						<%= link_to(mediaItem) do %> <strong><%= mediaItem.title %></strong> <% end %>
-					</li>
+					<tr>
+						<td>
+						<%= link_to(mediaItem) do %> <strong><%= mediaItem.title %></strong> <% end %>			  </td>
+					</tr>
 	<% end %>
-		</ol>
+	</table>
 </section>
 </div>
 

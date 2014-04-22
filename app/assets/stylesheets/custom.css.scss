@@ -20,7 +20,8 @@ $colHighlight	 : #3399FF;
 
 .jumbotron-media {
    color: white;
-	height: 450px;
+	height: 500px;
+	overflow: auto;
 	background-color: $bgDefault;
 }
 
@@ -255,4 +256,6 @@ input {
 		background-color: $bgDefault;
 }
 
-
+.media-table {
+	overflow: auto;
+}

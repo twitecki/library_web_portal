@@ -14,10 +14,11 @@ class MediaController < ApplicationController
 	def create
          if !signed_in?
 				flash.now[:error] = 'You have to sign in first'	
-				render 'browse_media'
+				render 'sessions/new'
          end
 		   if signed_in?
 				Media.create(media_type_id: 1, user_id: @current_user.id)
+				flash.now[:success] = 'Book Reserved!'
 				render 'browse_media'
 			end
    end
