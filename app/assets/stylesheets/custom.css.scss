@@ -46,11 +46,11 @@ $colHighlight	 : #3399FF;
 }
 
 .jumbotron-bookstack {
-	  background-image: url('bookstack.jpg');
+	  background-image: image-url('bookstack.jpg');
 }
 
 .jumbotron-kidsreading {
-	  background: image-url('kidsreading.jpg');
+	  background-image: image-url('kidsreading.jpg');
 }
 
 @mixin box_sizing {
