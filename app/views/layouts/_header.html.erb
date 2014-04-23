@@ -10,12 +10,28 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
       </ul>
-      <form class="navbar-form navbar-left" role="search">
+
+
+
+      <!--<form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search Media">
         </div>
         <button type="submit" class="btn btn-default">Search</button>
-      </form>
+      </form> -->
+
+		
+		<%= form_tag search_results_path, :method => 'get', :class => "navbar-form navbar-left" do %>
+        <div class="form-group">
+			<p>
+				<%= text_field_tag :search, params[:search], :class => "form-control", :placeholder => "Search Media Titles" %>
+				<%= submit_tag "Search", :title => nil, :class => "btn btn-primary" %>
+			</p>
+			</div>
+		<% end %>
+
+
+
       <ul class="nav navbar-nav navbar-right">
       	<li><%= link_to "Home", root_path %></li>
       	<li><%= link_to "Browse Media", browse_media_path %></li>

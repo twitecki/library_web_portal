@@ -12,16 +12,27 @@ class MediaController < ApplicationController
    end
 
 	def create
+			@media = Media.find(params[:media][:id])
+			id = @media.id
          if !signed_in?
 				flash.now[:error] = 'You have to sign in first'	
 				render 'sessions/new'
          end
-		   if signed_in?
-				Media.create(media_type_id: 1, user_id: @current_user.id)
-				flash.now[:success] = 'Book Reserved!'
+		   if signed_in? 
+				if @media.user_id == nil then
+					@media.user_id = @current_user.id
+					@media.save
+					flash.now[:success] = 'Book Reserved!'
+				else
+					flash.now[:error] = 'Someone else has reserved that book!'
+				end
 				render 'browse_media'
 			end
    end
+	
+	def search_results
+		@media_results = Media.search(params[:search]).order("title")
+	end
 
 	def browse_media
 	end

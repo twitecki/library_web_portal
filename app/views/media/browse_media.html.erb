@@ -1,15 +1,34 @@
 <div class="jumbotron-media">
 <section>
 <h1> Media </h1>
-
-	<table class="table table-striped media-table">
+<center>
+	<table class="table media-table table-bordered table-condensed">
+	<tr>
+		<th class="t-header">Book No</th>
+		<th class="t-header">Title</th>
+		<th class="t-header">Media Type</th>
+		<th class="t-header">Status</th>
+	</tr>
 	<% @medias.each do |mediaItem| %>
 					<tr>
 						<td>
-						<%= link_to(mediaItem) do %> <strong><%= mediaItem.title %></strong> <% end %>			  </td>
+							<%= mediaItem.id %> 
+						</td>
+						<td>
+							<%= link_to(mediaItem) do %> <strong><%= mediaItem.title %></strong> <% end %>
+						</td>
+						<td>
+							<%= "Book" if mediaItem.media_type_id == 1 %>
+							<%= "Movie" if mediaItem.media_type_id == 2 %>
+						</td>
+						<td>
+							<%= "Reserved" if mediaItem.user_id != nil%>
+							<%= "Available" if mediaItem.user_id == nil%>
+						</td>
 					</tr>
 	<% end %>
 	</table>
+</center>
 </section>
 </div>
 

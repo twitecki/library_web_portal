@@ -20,7 +20,7 @@ $colHighlight	 : #3399FF;
 
 .jumbotron-media {
    color: white;
-	height: 500px;
+	height: 560px;
 	overflow: auto;
 	background-color: $bgDefault;
 }
@@ -257,5 +257,16 @@ input {
 }
 
 .media-table {
+	border: 10px solid white;
+	border-collapse: collapse;
+	width: 600px;	
+	color: $colHighlight;
+	font-weight: bold;
+	.t-header {
+		color: $colDefault;
+	}
 	overflow: auto;
 }
+
+
+

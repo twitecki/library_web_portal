@@ -6,6 +6,7 @@
 
 	<%= form_for(:media, url: media_path) do |f| %>
 		<%= render 'shared/sign_in_first_message' %>
+		<%= f.hidden_field :id, value: @media.id %>
 		<%= f.submit "Reserve This Book", class: "btn btn-large btn-primary" %>
 	<% end %>
 
