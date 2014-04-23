@@ -18,9 +18,29 @@ $colHighlight	 : #3399FF;
     text-shadow: black 0.3em 0.3em 0.3em;
 }
 
+.jumbotron-apex{
+	height: 510px;
+	width: 650px;
+	background-color: #CCCCCC;
+}
+
+.jumbotron-contact {
+   color: white;
+	height: 200px;
+	overflow: auto;
+	background-color: $bgDefault;
+}
+
 .jumbotron-media {
    color: white;
 	height: 560px;
+	overflow: auto;
+	background-color: $bgDefault;
+}
+
+.jumbotron-mediaItem {
+   color: white;
+	height: 200px;
 	overflow: auto;
 	background-color: $bgDefault;
 }
@@ -259,7 +279,7 @@ input {
 .media-table {
 	border: 10px solid white;
 	border-collapse: collapse;
-	width: 600px;	
+	width: 700px;	
 	color: $colHighlight;
 	font-weight: bold;
 	.t-header {
@@ -268,5 +288,8 @@ input {
 	overflow: auto;
 }
 
-
+.thumbnail-about {
+	background-color: #44AAFF; 
+	height: 400px;
+}
 

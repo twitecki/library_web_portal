@@ -5,21 +5,37 @@
          <h1>
             <%= @user.first %>, <%= @user.last %>
          </h1>
-            <%= @user.card_number%>
+            Card Number: <%= @user.card_number%>
 			<h2> Reserved Books </h2>
 
 
-				<table class="table table-striped media-table">
-				
+<table class="table media-table table-bordered table-condensed">
+   <tr>
+      <th class="t-header">Book No</th>
+      <th class="t-header">Title</th>
+      <th class="t-header">Media Type</th>
+      <th class="t-header">Status</th>
+   </tr>				
 					<%
       				@medias.each do |m|
          				if @user.id == m.user_id %>
-								<tr>
-								<td>
-									<%= link_to(m) do %><strong> <%= m.title %><%end%>
-								</td>
-								</tr>
-            				<%
+						<tr>
+                  <td>
+                     <%= m.id %>
+                  </td>
+                  <td>
+                     <%= link_to(m) do %> <strong><%= m.title %></strong> <% end %>
+                  </td>
+                  <td>
+                     <%= "Book" if m.media_type_id == 1 %>
+                     <%= "Movie" if m.media_type_id == 2 %>
+                  </td>
+                  <td>
+                     <%= "Reserved" if m.user_id != nil%>
+                     <%= "Available" if m.user_id == nil%>
+                  </td>
+               </tr>
+										  <%
          				end
       				end	
 					%>

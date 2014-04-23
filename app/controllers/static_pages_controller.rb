@@ -9,7 +9,4 @@ class StaticPagesController < ApplicationController
 	def contact
 	end
 
-	def our_focus
-	end
-
 end

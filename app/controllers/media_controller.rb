@@ -24,7 +24,7 @@ class MediaController < ApplicationController
 					@media.save
 					flash.now[:success] = 'Book Reserved!'
 				else
-					flash.now[:error] = 'Someone else has reserved that book!'
+					flash.now[:error] = 'Sorry this book is already reserved!'
 				end
 				render 'browse_media'
 			end

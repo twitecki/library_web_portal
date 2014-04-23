@@ -3,34 +3,34 @@
 <center>
 <div class="row">
   <div class="col-md-4">
-    <div class="thumbnail">
-     <img src='media.jpg' height="250px" width="250px" class="img-circle"> 
+    <div class="thumbnail thumbnail-about">
+	 <%= image_tag("media.jpg", :class => "img-circle", :height => "300px", :width => "300px")%>	
       <div class="caption">
         <h3>Media Variety</h3>
-        <p>At Brooks Elementary, we provide a range of media types from dvd's to books. Browse our media collection to take a look!</p>
-        <%= link_to "Browse Media", '#', class: "btn btn-primary" %>
+        <p>At Hicks Elementary, we provide a range of media types from dvd's to books. Browse our media collection to take a look!</p>
+        <%= link_to "Browse Media", browse_media_path, class: "btn btn-primary" %>
       </div>
     </div>
   </div>
 
   <div class="col-md-4">
-    <div class="thumbnail">
-     <img src='personnel.jpg' height="250px" width="250px" class="img-circle"> 
+    <div class="thumbnail thumbnail-about">
+	 <%= image_tag("librarian.jpg", :class => "img-circle", :height => "300px", :width => "300px")%>	
       <div class="caption">
         <h3>Personnel</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+        <p>Our Library Staff works hard to ensure you find what you're looking for!</p>
+        <%= link_to "Contact Us", contact_path, class: "btn btn-primary" %>
       </div>
     </div>
   </div>
 
   <div class="col-md-4">
-    <div class="thumbnail">
-     <img src='facilities.jpg' height="250px" width="250px" class="img-circle"> 
+    <div class="thumbnail thumbnail-about">
+	 <%= image_tag("library.jpg", :class => "img-circle", :height => "300px", :width => "300px")%>	
       <div class="caption">
         <h3>Facilities</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+        <p>Our state of the art facilities provide a prime habitat for reading and learning</p>
+        <%= link_to "Make A Suggestion", contact_path, class: "btn btn-primary" %>
       </div>
     </div>
   </div>
